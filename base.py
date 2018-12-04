@@ -118,13 +118,9 @@ def on_click(index):
     if(index == -1):
         return -1
 
-    sublime.active_window().set_layout({
-        "cols": [
-            0.0, 0.60, 1.0], "rows": [
-            0.0, 1.0], "cells": [
-            [
-                0, 0, 1, 1], [
-                1, 0, 2, 1]]})
+    sublime.active_window().set_layout({"cols": [0.0, 0.60, 1.0],
+                                        "rows": [0.0, 1.0],
+                                        "cells": [ [0, 0, 1, 1], [1, 0, 2, 1] ] })
     for numGroup in range(sublime.active_window().num_groups()):
         if len(sublime.active_window().views_in_group(numGroup)) == 0:
             sublime.active_window().focus_group(numGroup)
