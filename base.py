@@ -84,7 +84,7 @@ def extract_path():
     os.chdir(path)
     # Write exception case for opening file that may not exist
     with open('./.git/config') as f:
-        github_path = f.read().splitlines()[6][22:-4]
+        github_path = f.read().splitlines()[6][26:-4]
     return github_path
 
 
