@@ -32,9 +32,7 @@ class Authenticate:
         }
         response = requests.get(
             git_constants.REPOS,
-            auth=(
-                self.username,
-                self.token),
+            auth=(self.username, self.token),
             params=params)
         self.repos = response.json()
         print(self.repos)
@@ -48,9 +46,7 @@ class Authenticate:
         url = git_constants.GITHUB_REPO + ("%s/%s/pulls" % (owner, repo))
         response = requests.get(
             url,
-            auth=(
-                self.username,
-                self.token),
+            auth=(self.username, self.token),
             params=params)
         return response.json()
 
@@ -61,9 +57,7 @@ class Authenticate:
         url += "/pulls/:" + str(pr_id) + "/reviews"
         response = requests.get(
             url,
-            auth=(
-                self.username,
-                self.token),
+            auth=(self.username, self.token),
             params=params)
         return response.json()
 
@@ -77,9 +71,7 @@ class Authenticate:
         print(url)
         response = requests.get(
             url,
-            auth=(
-                self.username,
-                self.token),
+            auth=(self.username, self.token),
             params=params)
         return response.json()
 
