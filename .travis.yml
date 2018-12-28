@@ -36,7 +36,7 @@ script:
     # run tests with test coverage report
     - sh travis.sh run_tests
     - cd utils
-    - nosetests --with-coverage
+    - nosetests
     # testing syntax_test files
     # - sh travis.sh run_syntax_tests
 
@@ -48,8 +48,8 @@ after_success:
       fi
     - pip3 install python-coveralls;
     - pip3 install codecov;
-    - coveralls utils/
-    - codecov utils/
+    - cd utils/test_utils 
+    - nosetests --with-coverage
 
 notifications:
     email: false
