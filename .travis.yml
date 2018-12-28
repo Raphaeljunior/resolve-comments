@@ -48,7 +48,6 @@ after_success:
       fi
     - pip3 install python-coveralls;
     - pip3 install codecov;
-    - cd test_utils 
     - nosetests --with-coverage
 
 notifications:
