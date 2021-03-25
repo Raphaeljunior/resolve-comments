@@ -24,7 +24,7 @@ pre-commit==1.11.2
 pycodestyle==2.4.0
 pyflakes==1.6.0
 pylint==2.1.1
-PyYAML==3.13
+PyYAML==5.4
 requests==2.20.0
 six==1.11.0
 toml==0.10.0
